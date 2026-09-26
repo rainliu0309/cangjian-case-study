@@ -6501,6 +6501,53 @@ html[data-theme="dark"] #case-structure :is(.cangjian-value-chain header span,.c
  .module-two-solution-response p { margin-top:7px; }
  .module-two-solution-map :is(p,strong) { overflow-wrap:anywhere; }
 }
+/* Current six-chapter components share the dark reading palette. */
+html[data-theme="dark"] #case-structure {
+  --klein: var(--dark-accent);
+  --module-six-accent: var(--dark-accent);
+}
+html[data-theme="dark"] #case-structure :is(.cangjian-problem-question > span,.cangjian-audience-card header p,.cangjian-scenario-card header p,.cangjian-demo-disclosure b,.cangjian-value-group-heading > p,.module-two-solution-map li > em,.module-five-attribution-method b) { color:var(--dark-accent) !important; }
+html[data-theme="dark"] #case-structure :is(
+  .cangjian-audience-card, .cangjian-scenario-card, .cangjian-scope-grid article,
+  .module-two-tradeoff-cards li, .module-six-roadmap-track
+) { background:var(--dark-surface-raised, #19253b) !important; border-color:var(--dark-line) !important; box-shadow:none; }
+html[data-theme="dark"] #case-structure :is(
+  .cangjian-audience-gap, .cangjian-scenario-overview, .cangjian-demo-disclosure,
+  .module-two-pain-conclusion, .module-five-attribution-split figcaption p
+) { background:#162238 !important; border-color:var(--dark-line) !important; }
+html[data-theme="dark"] #case-structure :is(
+  .module-one-pain-detail p, .module-two-pain-detail p, .module-two-tradeoff-cards p,
+  .cangjian-scope-grid article > p, .cangjian-value-intro, .cangjian-scope-points li,
+  .cangjian-scenario-overview p, .cangjian-demo-disclosure p,
+  .module-six-roadmap-track p, .module-six-rollout-detail p, .module-six-enable-detail p
+) { color:var(--dark-text-secondary) !important; }
+html[data-theme="dark"] #case-structure :is(
+  .cangjian-scope-grid small, .cangjian-demo-disclosure small,
+  .module-two-tradeoff-cards small, .module-six-roadmap-track small
+) { color:var(--dark-text-muted) !important; }
+html[data-theme="dark"] #case-structure :is(
+  .cangjian-scope-grid summary, .cangjian-scope-grid summary span,
+  .cangjian-scope-grid header span, .cangjian-audience-card header > span,
+  .cangjian-scenario-card header > span, .cangjian-audience-gap > span,
+  .cangjian-scenario-overview > span, .cangjian-scenario-tags span,
+  .cangjian-demo-disclosure summary i, .module-two-tradeoff-cards em,
+  .module-two-tradeoff-cards b, .module-six-roadmap-track li em,
+  .module-four-live-demo-header a
+) { color:var(--dark-accent) !important; }
+html[data-theme="dark"] #case-structure :is(
+  .cangjian-scope-grid header span, .module-two-tradeoff-cards b,
+  .cangjian-scenario-tags span, .module-six-roadmap-track li em
+) { background:rgba(142,174,255,.12) !important; border-color:var(--dark-line-strong) !important; }
+html[data-theme="dark"] #case-structure :is(
+  .cangjian-scope-grid details, .module-two-tradeoff-cards li > div + div,
+  .cangjian-value-group-heading, .cangjian-demo-disclosure[open] summary
+) { border-color:var(--dark-line) !important; }
+html[data-theme="dark"] #case-structure .cangjian-scope-points li::before,
+html[data-theme="dark"] #case-structure .module-six-rollout-detail p::before { background:var(--dark-accent); }
+html[data-theme="dark"] #case-structure .cangjian-value-hero::after { color:var(--dark-accent); opacity:.12; }
+html[data-theme="dark"] #case-structure :is(.cangjian-scope-grid summary, .cangjian-demo-disclosure summary)::after { border-color:var(--dark-accent); }
+html[data-theme="dark"] #case-structure :is(button,summary,a):focus-visible { outline-color:var(--dark-accent) !important; }
+html[data-theme="dark"] #case-structure :is(.module-two-tradeoff-cards li:hover,.cangjian-demo-disclosure:hover,.cangjian-demo-disclosure[open]) { background:#20304a !important; border-color:var(--dark-accent) !important; }
 .module-two-scope { container-type:inline-size; }
 #case-structure .cangjian-scope-intro { margin:0 0 22px; color:#64738b; font:400 14px/1.8 "Noto Sans SC",sans-serif; }
 .cangjian-scope-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:start; gap:16px; }
