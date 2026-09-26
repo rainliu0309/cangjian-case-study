@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f5f5">
+    <script>
+      (() => {
+        try {
+        const theme = localStorage.getItem("rain-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#0c111d" : "#f5f5f5";
+        } catch {}
+      })();
+    </script>
+    <meta name="description" content="藏见 CANGJIAN：将小红书收藏场景转化为可追溯偏好线索的 AI 产品设计案例。">
+    <title>Rain Liu | 藏见 CANGJIAN</title>
+    <link rel="icon" type="image/svg+xml" href="./media/logo.svg">
+    <link rel="canonical" href="https://rain-liu.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;family=Noto+Sans+SC:wght@300;400;500&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/cangjian.css?v=20260926-scope-cards">
+    <script src="./assets/case-study.js?v=20260925-media-relink" defer=""></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="glass-control brand portfolio-logo" href="#top" aria-label="Back to top">
+        <img src="./media/logo-light.svg" alt="">
+      </a>
+      <button class="theme-switch header-theme-switch" type="button" role="switch" aria-label="Switch to dark mode" aria-checked="false" data-case-theme-switch="">
+          <svg class="theme-switch-icon theme-switch-icon--sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.1"></circle><path d="M10 1.5v2M10 16.5v2M1.5 10h2M16.5 10h2M4 4l1.45 1.45M14.55 14.55 16 16M16 4l-1.45 1.45M5.45 14.55 4 16"></path></svg>
+          <svg class="theme-switch-icon theme-switch-icon--moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.3 12.3A6.7 6.7 0 0 1 7.7 3.7a6.7 6.7 0 1 0 8.6 8.6Z"></path></svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">Case Study</p>
+          <h1>
+            藏见 CANGJIAN
+          </h1>
+          <p class="hero-role"><b>我的角色</b><span>AI 产品设计师 ｜ 产品策略 · AI 体验设计 · 前端原型开发 · 0→1 落地</span></p>
+          <div class="hero-actions" aria-label="Project links">
+            <a class="hero-action" href="https://github.com/rainliu0309/cangjian-ai-design.git" target="_blank" rel="noopener noreferrer">
+              GitHub ↗
+            </a>
+            <a class="hero-action hero-action--primary" href="https://cangjian-ai-design.onrender.com" target="_blank" rel="noopener noreferrer">
+              Live Demo ↗
+            </a>
+          </div>
+
+          <div class="intro">
+            <div class="intro-details">
+              <p class="intro-copy">
+            藏见是一项围绕小红书收藏行为展开的<strong> AI Native 产品设计实践</strong>。<br>
+            从审美体验与交互设计出发，我将零散的图片与笔记收藏转化为可追溯的偏好线索、灵感地图与下一步选择支持；并以可运行原型验证 AI 如何嵌入用户的收藏、回看与决策流程。让收藏不止被保存，也能帮助下一次选择——<strong>从收藏里，看见自己。</strong>
+              </p>
+              <div class="tags" aria-label="Project tags">
+            <span class="tag">AI Native</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Product Owner</span>
+            <span class="tag">Vibe Coding</span>
+            <span class="tag">Prototyping</span>
+              </div>
+            </div>
+
+            <div class="intro-demo">
+              <div class="demo-shell">
+                <p class="demo-label">Concept Video · 00:05</p>
+                <video src="./media/cangjian.mov" autoplay="" muted="" loop="" playsinline="" controls="" aria-label="藏见产品概念视频"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section class="structure-section teamalign-bloom-section" id="case-structure">
+        <div class="teamalign-bloom-shell">
+          <header class="structure-heading reveal-on-scroll case-reveal">
+            <div>
+              <h2>从收藏到看见</h2>
+            </div>
+            <p>从真实场景、设计取舍到可运行体验，记录藏见的产品设计过程。</p>
+          </header>
+
+          <div class="teamalign-case-layout reveal-on-scroll case-reveal">
+            <div class="teamalign-journey-dock">
+              <nav class="teamalign-journey-nav" aria-label="01项目概述
+                02方案取舍
+          ">
+                <svg class="teamalign-journey-line" viewBox="0 0 240 620" preserveAspectRatio="none" aria-hidden="true"><path d="M 82 38 C 168 96 44 142 136 210 S 48 330 142 392 S 55 508 116 580"></path></svg>
+                <button class="journey-step journey-step--1 is-active" type="button" aria-pressed="true" data-index="01" data-title="产品机会与价值定位" data-title-zh="" data-summary="从用户场景出发，明确产品机会、价值主张与下一步选择支持。" data-summary-zh=""><span class="journey-node">01</span><span><strong>项目概述</strong></span></button>
+                <button class="journey-step journey-step--2" type="button" aria-pressed="false" data-index="02" data-title="产品方案与关键取舍" data-title-zh="" data-summary="从收藏痛点、方案结构与人机取舍，建立可回溯的选择支持。" data-summary-zh=""><span class="journey-node">02</span><span><strong>方案取舍</strong></span></button>
+                <button class="journey-step journey-step--3" type="button" aria-pressed="false" data-index="03" data-title="AI 交互与协作流程" data-title-zh="" data-summary="从选择材料到保存回望，明确用户、AI 与界面的分工。" data-summary-zh=""><span class="journey-node">03</span><span><strong>AI交互流程</strong></span></button>
+                <button class="journey-step journey-step--4" type="button" aria-pressed="false" data-index="04" data-title="原型验证与体验设计" data-title-zh="" data-summary="通过信息架构、任务流程与可运行原型，检验体验是否清晰。" data-summary-zh=""><span class="journey-node">04</span><span><strong>用户流程</strong></span></button>
+                <button class="journey-step journey-step--5" type="button" aria-pressed="false" data-index="05" data-title="效果衡量与价值验证" data-title-zh="" data-summary="围绕完成任务、理解依据与支持选择，建立待验证的目标。" data-summary-zh=""><span class="journey-node">05</span><span><strong>价值验证</strong></span></button>
+                <button class="journey-step journey-step--6" type="button" aria-pressed="false" data-index="06" data-title="落地规划与持续迭代" data-title-zh="" data-summary="借助 AI 编程工具完成原型，在运行和反馈中持续迭代。" data-summary-zh=""><span class="journey-node">06</span><span><strong>落地迭代</strong></span></button>
+              </nav>
+              <div class="teamalign-journey-scroll-progress" aria-hidden="true">
+                <span class="teamalign-journey-scroll-progress-bar"></span>
+              </div>
+            </div>
+
+            <section class="teamalign-chapter-stage" aria-live="polite">
+              <p class="teamalign-chapter-stage-kicker">章节 <span class="teamalign-chapter-stage-index">01</span></p>
+              
+              <h3>问题定义与价值主张</h3>
+              <p class="teamalign-chapter-stage-zh" hidden=""></p>
+              <div class="teamalign-chapter-stage-summary">
+                <p class="teamalign-chapter-stage-summary-en">面向小红书收藏场景，让灵感积累成为下一次选择的依据。</p>
+                <p class="teamalign-chapter-stage-summary-zh" hidden=""></p>
+              </div>
+              <div class="teamalign-chapter-stage-rule" aria-hidden="true"></div>
+
+              <section class="teamalign-module-detail" data-chapter-detail="01" aria-labelledby="module-one-profile-label">
+                <div class="module-one-block module-one-profile">
+                  <div class="module-one-copy">
+                    <header class="module-one-section-heading" id="module-one-profile-label">
+                      <p>问题定义</p>
+                      
+                    </header>
+                    <div class="cangjian-value-hero">
+                      <p>用户会在小红书保存各类帖子，但当真正需要布置、购买或规划时，分散的收藏很难自然转化为可比较的依据与下一步选择。</p>
+                      <p class="cangjian-problem-question"><span aria-hidden="true">→</span>如何让分散的收藏不止被保存，而能转化为可解释、可比较、可行动的决策依据？</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-one-block module-one-positioning">
+                  <header class="module-one-section-heading">
+                    <p>用户与场景</p>
+                    
+                  </header>
+                  <div class="cangjian-audience-scenario-grid">
+                    <article class="cangjian-audience-card">
+                      <header>
+                        <span>01</span>
+                        <p>目标用户</p>
+                      </header>
+                      <div class="cangjian-audience-gap" aria-label="已有灵感收藏，但仍缺少选择依据">
+                        <div><small>已有</small><strong>灵感收藏</strong></div>
+                        <span aria-hidden="true">→</span>
+                        <div><small>仍缺</small><strong>选择依据</strong></div>
+                      </div>
+                      <ul class="cangjian-scope-points">
+                        <li>用小红书积累家居、穿搭、旅行等生活灵感</li>
+                        <li>真正需要选择时，反复翻找和比较旧收藏</li>
+                        <li>想看懂偏好，但仍希望自己做最终判断</li>
+                      </ul>
+                    </article>
+                    <section class="cangjian-scenario-card" aria-labelledby="core-scenario-title">
+                      <header>
+                        <span>02</span>
+                        <p id="core-scenario-title">核心场景</p>
+                        <small>从宽泛需求到当前验证</small>
+                      </header>
+                      <div class="cangjian-scenario-overview">
+                        <span>收藏 → 偏好 → 决策</span>
+                        <h4>当用户想把积累的灵感，转化为一项具体的生活选择</h4>
+                        <p>藏见服务的不是某一个品类，而是「收藏已经很多，但还无法据此做决定」的时刻。</p>
+                        <div class="cangjian-scenario-tags" aria-label="可扩展的生活决策场景">
+                          <span>家居布置</span>
+                          <span>穿搭选择</span>
+                          <span>旅行规划</span>
+                        </div>
+                      </div>
+                      <details class="cangjian-demo-disclosure">
+                        <summary><b>当前 Demo</b><strong>家装布置</strong><i>点击展开</i></summary>
+                        <div>
+                          <p><b>输入</b>用户选取已收藏的家居灵感帖子。</p>
+                          <p><b>过程</b>AI 提炼跨帖共同线索，用户查看来源并修正判断。</p>
+                          <p><b>输出</b>将配色、材质、氛围等偏好整理为可用于布置选择的依据。</p>
+                        </div>
+                      </details>
+                    </section>
+                  </div>
+                </div>
+
+                <div class="module-one-block module-one-pain-section">
+                  <header class="module-one-section-heading">
+                    <p>价值主张</p>
+                    
+                  </header>
+                  <p class="cangjian-value-intro">藏见不替用户决定，而是把收藏中的感性喜欢，逐步转化为用户看得懂、能参与的决策过程。</p>
+                  <section class="cangjian-value-group" aria-labelledby="user-value-title">
+                    <header class="cangjian-value-group-heading">
+                      <p id="user-value-title">用户价值</p>
+                      <small>从「收藏过」到「能选择」</small>
+                    </header>
+                    <ol class="module-one-pain-list cangjian-value-list" aria-label="用户价值，点击每项查看说明">
+                      <li class="module-one-pain-item" data-pain-point="see" tabindex="0" role="button">
+                        <div class="module-one-pain-axis">
+                          <div>
+                            <p>01 · 看见偏好</p>
+                            
+                          </div>
+                        </div>
+                        <div class="module-one-pain-detail">
+                          <p>从零散的帖子里，发现反复出现的个人偏好。</p>
+                          <small>AI 跨帖归纳风格、元素与使用场景等线索；用户看到的不只是「都喜欢」，还有偏好具体体现在哪里。</small>
+                        </div>
+                      </li>
+                      <li class="module-one-pain-item" data-pain-point="judge" tabindex="0" role="button">
+                        <div class="module-one-pain-axis">
+                          <div>
+                            <p>02 · 形成依据</p>
+                            
+                          </div>
+                        </div>
+                        <div class="module-one-pain-detail">
+                          <p>把「喜欢过什么」变成可解释、可比较的个人标准。</p>
+                          <small>每条标准都关联原始收藏，用户可以查看来源、补充或修正判断；AI 提供整理，判断权始终留给用户。</small>
+                        </div>
+                      </li>
+                    </ol>
+                  </section>
+                  <section class="cangjian-value-group cangjian-value-group--business" aria-labelledby="business-value-title">
+                    <header class="cangjian-value-group-heading">
+                      <p id="business-value-title">业务价值 <em>预期</em></p>
+                      <small>让沉淀内容成为下一次服务的入口</small>
+                    </header>
+                    <ol class="module-one-pain-list cangjian-value-list" aria-label="业务价值预期，点击查看说明">
+                      <li class="module-one-pain-item" data-pain-point="activate" tabindex="0" role="button">
+                        <div class="module-one-pain-axis">
+                          <div>
+                            <p>03 · 激活收藏</p>
+                            
+                          </div>
+                        </div>
+                        <div class="module-one-pain-detail">
+                          <p>让沉淀收藏从一次保存，变为持续可用的决策入口。</p>
+                          <small>预期促进用户回看与重新使用已有内容，并为家装、穿搭、旅行等场景化服务提供更合适的承接时机；当前仅以家装 Demo 验证用户闭环。</small>
+                        </div>
+                      </li>
+                      <li class="module-one-pain-item" data-pain-point="connect" tabindex="0" role="button">
+                        <div class="module-one-pain-axis">
+                          <div>
+                            <p>04 · 承接场景</p>
+                            
+                          </div>
+                        </div>
+                        <div class="module-one-pain-detail">
+                          <p>在用户出现明确需求时，连接内容、偏好与后续服务。</p>
+                          <small>当用户从灵感回看走向具体选择，已沉淀的偏好可帮助匹配更相关的内容或服务，预期缩短从浏览到行动之间的路径。</small>
+                        </div>
+                      </li>
+                    </ol>
+                  </section>
+                </div>
+
+                <figure class="module-one-block module-one-flow" aria-label="从收藏内容到辅助选择的转化流程">
+                  <div class="module-one-flow-diagram">
+                    <article class="module-one-flow-node module-one-flow-node--input"><em>材料</em><b>收藏内容</b></article>
+                    <i class="module-one-flow-link" aria-hidden="true"></i>
+                    <article class="module-one-flow-node module-one-flow-node--pain"><em>难题</em><b>偏好模糊</b></article>
+                    <i class="module-one-flow-link module-one-flow-link--agent" aria-hidden="true"></i>
+                    <article class="module-one-flow-node module-one-flow-node--agent"><em>AI 参与</em><b>提炼线索</b></article>
+                    <i class="module-one-flow-link module-one-flow-link--outcome" aria-hidden="true"></i>
+                    <article class="module-one-flow-node module-one-flow-node--output"><em>用户价值</em><b>辅助选择</b></article>
+                  </div>
+                </figure>
+              </section>
+
+              <section class="teamalign-module-detail" data-chapter-detail="02" aria-labelledby="module-two-source-label" hidden="">
+                <div class="module-two-block module-two-scope">
+                  <header class="module-one-section-heading">
+                    <p>产品范围</p>
+                  </header>
+                  <div class="cangjian-scope" aria-label="藏见的产品范围">
+                    <div class="cangjian-scope-grid">
+                      <article><header><span>01</span><h4>服务环节</h4></header><p>聚焦积累灵感之后、做出选择之前的整理与判断，帮助用户回看已有收藏，梳理需求。</p><details><summary><span>展开说明</span><span>收起说明</span></summary><small>用户主动选择与当前任务相关的收藏，限定分析语境；围绕一次具体需求整理材料，避免将全部收藏混为统一偏好。</small></details></article>
+                      <article><header><span>02</span><h4>核心能力</h4></header><p>从多条收藏中提炼偏好线索、关联原始证据，通过反馈修正与保存回看，支持后续比较。</p><details><summary><span>展开说明</span><span>收起说明</span></summary><small>用户可查看线索来源，表达认同、否定或暂不确定；保留不同偏好方向，并将认可的线索作为后续比较的参考。</small></details></article>
+                      <article><header><span>03</span><h4>本次边界</h4></header><p>前端不覆盖内容发现与新增收藏；后端不覆盖商品推荐、交易执行及后续服务承接。</p><details><summary><span>展开说明</span><span>收起说明</span></summary><small>本次原型使用示例收藏，暂不接入真实平台导入与同步；分析结果用于辅助理解与比较，最终选择及行动由用户决定。</small></details></article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-two-block module-two-source">
+                  <header class="module-one-section-heading" id="module-two-source-label">
+                    <p>痛点拆解</p>
+                    
+                  </header>
+                  <div class="module-two-source-layout">
+                    <div class="module-two-pain-breakdown" aria-label="从收藏到选择的痛点拆解">
+                      <p class="module-two-map-kicker">从收藏到具体选择，用户卡在三处</p>
+                      <ol class="module-one-pain-list module-two-pain-list">
+                        <li><div class="module-one-pain-axis"><p>01 · 收藏分散</p></div><div class="module-one-pain-detail"><p>帖子越存越多，却缺少一个能整体回看的入口。</p><small>内容分散在不同时间、不同主题的帖子中；需要时只能重新翻找。</small></div></li>
+                        <li><div class="module-one-pain-axis"><p>02 · 偏好难言</p></div><div class="module-one-pain-detail"><p>知道自己喜欢，却说不清哪些元素反复出现。</p><small>感性的喜欢没有被整理成可解释、可比较的个人依据。</small></div></li>
+                        <li><div class="module-one-pain-axis"><p>03 · 行动仍难</p></div><div class="module-one-pain-detail"><p>真正要布置、购买或规划时，仍要从头比较旧收藏。</p><small>收藏记录了灵感，却还没有变成能支持下一步选择的材料。</small></div></li>
+                      </ol>
+                      <aside class="module-two-pain-conclusion" aria-label="核心问题"><p><strong>核心问题：</strong>收藏记录了喜欢，但还没有沉淀为选择依据。</p></aside>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-two-block module-two-tiering module-two-solution-plan">
+                  <header class="module-one-section-heading">
+                    <p>产品方案</p>
+                    
+                  </header>
+                  <p class="module-one-copy-zh" hidden=""></p>
+                  <div class="module-two-solution-map" aria-label="痛点、产品回应和用户获得的对应关系">
+                    <div class="module-two-solution-map-head" aria-hidden="true"><span></span><span>对应痛点</span><span>产品回应</span><span>用户获得</span></div>
+                    <ol>
+                      <li><em>01</em><div class="module-two-solution-problem"><strong>收藏分散</strong></div><div class="module-two-solution-response"><strong>主题化回看</strong><p>围绕一次具体选择，归拢相关收藏并建立可回看的材料集合。</p></div><div class="module-two-solution-outcome"><strong>一处回看</strong><p>不必重新翻找，能从一处回到相关灵感。</p></div></li>
+                      <li><em>02</em><div class="module-two-solution-problem"><strong>偏好难言</strong></div><div class="module-two-solution-response"><strong>可回溯的偏好线索</strong><p>从多条收藏中识别重复出现的元素，并展示每条线索的来源。</p></div><div class="module-two-solution-outcome"><strong>看懂偏好</strong><p>不只知道喜欢，还能看懂自己偏好的具体表现。</p></div></li>
+                      <li><em>03</em><div class="module-two-solution-problem"><strong>行动仍难</strong></div><div class="module-two-solution-response"><strong>可比较的选择依据</strong><p>允许用户查看、保留或修正线索，再用于下一步比较与判断。</p></div><div class="module-two-solution-outcome"><strong>有据可选</strong><p>行动前有可核对的依据，同时保留最终判断权。</p></div></li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div class="module-two-block module-two-consensus">
+                  <header class="module-one-section-heading">
+                    <p>线索结构</p>
+                    
+                  </header>
+                  <div class="module-two-consensus-record" aria-label="每条线索的解释要素
+                    
+         ">
+                    <p>每条线索的解释要素</p>
+                    <div>
+                      <article><strong>短名称</strong></article>
+                      <article><strong>共同特征</strong></article>
+                      <article><strong>材料依据</strong></article>
+                      <article><strong>支持程度</strong></article>
+                      <article><strong>用户反馈</strong></article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-two-block module-two-adaptation module-two-key-tradeoff">
+                  <header class="module-one-section-heading">
+                    <p>关键取舍</p>
+                    
+                  </header>
+                  <p class="module-one-copy-zh" hidden=""></p>
+                  <ol class="module-two-tradeoff-cards" aria-label="四项关键取舍">
+                    <li><em>01 · 上下文边界</em><div><b>采用</b><strong>用户界定分析范围</strong><p>仅基于用户主动选定、与当前任务相关的内容分析。</p></div><div><b>避免</b><strong>默认纳入全部收藏</strong><p>方便覆盖更多内容，却容易混入无关语境。</p></div></li>
+                    <li><em>02 · 解释机制</em><div><b>采用</b><strong>展示可回溯证据</strong><p>每条线索都能回到支持它的具体收藏。</p></div><div><b>避免</b><strong>黑箱总结或单一评分</strong><p>结果看似明确，却难以理解和核对。</p></div></li>
+                    <li><em>03 · 不确定性处理</em><div><b>采用</b><strong>保留多种偏好方向</strong><p>让并存甚至矛盾的线索保留在不同场景中。</p></div><div><b>避免</b><strong>强行归为唯一结论</strong><p>为了确定性而压掉真实的偏好差异。</p></div></li>
+                    <li><em>04 · 人机决策权</em><div><b>采用</b><strong>建议与修正入口</strong><p>AI 提供线索，用户可以查看、保留或调整。</p></div><div><b>避免</b><strong>系统直接替选</strong><p>由系统替用户给出看似最优的唯一答案。</p></div></li>
+                  </ol>
+                </div>
+              </section>
+
+              <section class="teamalign-module-detail" data-chapter-detail="03" aria-labelledby="module-three-workflow-label" hidden="">
+                <div class="module-three-block module-three-overview">
+                  <header class="module-one-section-heading" id="module-three-workflow-label">
+                    <p>核心流程</p>
+                    
+                  </header>
+                  <figure class="module-three-stage-flow" aria-labelledby="module-three-stage-flow-caption">
+                    <figcaption id="module-three-stage-flow-caption">
+                      <b>收藏、看见、回望：三阶段体验</b>
+                      
+                    </figcaption>
+                    <div class="module-three-stage-flow-track">
+                      <article class="module-three-stage-card module-three-stage-card--pre">
+                        <em>01 · 收藏</em>
+                        <strong>选择材料</strong>
+                        
+                        <ul class="module-three-stage-points">
+                          <li><span>进入收藏</span></li>
+                          <li><span>选择内容</span></li>
+                        </ul>
+                      </article>
+                      <div class="module-three-stage-link module-three-stage-link--ai" aria-hidden="true"><span>AI 提炼</span></div>
+                      <article class="module-three-stage-card module-three-stage-card--in">
+                        <em>02 · 看见</em>
+                        <strong>理解与校正</strong>
+                        
+                        <ul class="module-three-stage-points">
+                          <li><span>查看线索</span></li>
+                          <li><span>核对证据</span></li>
+                          <li><span>反馈修正</span></li>
+                        </ul>
+                      </article>
+                      <div class="module-three-stage-link module-three-stage-link--human" aria-hidden="true"><span>用户确认</span></div>
+                      <article class="module-three-stage-card module-three-stage-card--post">
+                        <em>03 · 回望</em>
+                        <strong>保存与复用</strong>
+                        
+                        <ul class="module-three-stage-points">
+                          <li><span>保存地图</span></li>
+                          <li><span>重新回看</span></li>
+                        </ul>
+                      </article>
+                    </div>
+                  </figure>
+                </div>
+
+                <section class="module-three-block module-three-workbench" aria-labelledby="module-three-timeline-label">
+                  <header class="module-one-section-heading">
+                    <p id="module-three-timeline-label">交互时间线</p>
+                    
+                  </header>
+
+                  <div class="module-three-phase-tabs" role="group" aria-label="收藏
+                    看见
+              ">
+                    <button class="module-three-phase-tab" type="button" data-workflow-phase="pre" aria-pressed="false"><span>收藏</span></button>
+                    <button class="module-three-phase-tab" type="button" data-workflow-phase="in" aria-pressed="false"><span>看见</span></button>
+                    <button class="module-three-phase-tab" type="button" data-workflow-phase="post" aria-pressed="false"><span>回望</span></button>
+                  </div>
+
+                  <div class="module-three-workflow-surface">
+                    <aside class="module-three-workflow-legend" aria-label="操作分工
+                      
+            ">
+                      <p>操作分工</p>
+                      <ul>
+                        <li><i class="module-three-legend-dot module-three-legend-dot--human"></i><span>用户操作</span></li>
+                        <li><i class="module-three-legend-dot module-three-legend-dot--ai"></i><span>AI 处理</span></li>
+                        <li><i class="module-three-legend-dot module-three-legend-dot--archive"></i><span>本地记录</span></li>
+                      </ul>
+                    </aside>
+
+                    <div class="module-three-timeline-column">
+                      <div class="module-three-timeline-progress" aria-hidden="true"><i class="module-three-timeline-progress-bar"></i></div>
+                      <div class="module-three-timeline-wrap">
+                        <div class="module-three-timeline" role="list" aria-label="01进入收藏
+                        
+        ">
+                        <button class="module-three-workflow-node module-three-workflow-node--human is-active" type="button" role="listitem" data-workflow-node="" data-phase="pre" data-step="01" data-title="进入收藏" data-title-zh="" data-user="从首页进入示例收藏，了解当前可用材料。" data-user-zh="" data-ai="本步不调用模型。" data-ai-zh="" data-output="一组可选择的家居收藏" data-output-zh="">
+                          <em>01</em><strong>进入收藏</strong>
+                        </button>
+                        <button class="module-three-workflow-node module-three-workflow-node--human" type="button" role="listitem" data-workflow-node="" data-phase="pre" data-step="02" data-title="选择材料" data-title-zh="" data-user="选择 3—20 条与当前需求有关的收藏。" data-user-zh="" data-ai="服务端校验数量与 ID；准备文字输入。" data-ai-zh="" data-output="本次分析的材料集合" data-output-zh="">
+                          <em>02</em><strong>选择材料</strong>
+                        </button>
+                        <button class="module-three-workflow-node module-three-workflow-node--ai" type="button" role="listitem" data-workflow-node="" data-phase="in" data-step="03" data-title="生成线索" data-title-zh="" data-user="发起分析，等待地图生成。" data-user-zh="" data-ai="归纳文字共同点，生成带证据 ID 的线索。" data-ai-zh="" data-output="可探索的偏好泡泡与连线" data-output-zh="">
+                          <em>03</em><strong>生成线索</strong>
+                        </button>
+                        <button class="module-three-workflow-node module-three-workflow-node--human" type="button" role="listitem" data-workflow-node="" data-phase="in" data-step="04" data-title="核对依据" data-title-zh="" data-user="打开泡泡，查看解释和对应收藏。" data-user-zh="" data-ai="本步展示已有结果，不额外调用模型。" data-ai-zh="" data-output="用户可检查的解释与证据" data-output-zh="">
+                          <em>04</em><strong>核对依据</strong>
+                        </button>
+                        <button class="module-three-workflow-node module-three-workflow-node--human" type="button" role="listitem" data-workflow-node="" data-phase="in" data-step="05" data-title="反馈修正" data-title-zh="" data-user="选择「很像我」「不太像我」或「再看看」。" data-user-zh="" data-ai="结合原材料、上次结果与反馈重新理解。" data-ai-zh="" data-output="更新后的线索与反馈状态" data-output-zh="">
+                          <em>05</em><strong>反馈修正</strong>
+                        </button>
+                        <button class="module-three-workflow-node module-three-workflow-node--archive" type="button" role="listitem" data-workflow-node="" data-phase="post" data-step="06" data-title="保存地图" data-title-zh="" data-user="确认保留结果，保存到回望。" data-user-zh="" data-ai="本步不调用模型，由浏览器保存记录。" data-ai-zh="" data-output="本地回望记录" data-output-zh="">
+                          <em>06</em><strong>保存地图</strong>
+                        </button>
+                        <button class="module-three-workflow-node module-three-workflow-node--archive" type="button" role="listitem" data-workflow-node="" data-phase="post" data-step="07" data-title="重新回看" data-title-zh="" data-user="从回望打开旧记录，继续核对选择依据。" data-user-zh="" data-ai="读取已保存的结果，不重新推断。" data-ai-zh="" data-output="可再次使用的灵感地图" data-output-zh="">
+                          <em>07</em><strong>重新回看</strong>
+                        </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <section class="module-three-node-popover" aria-live="polite">
+                      <header><span class="module-three-popover-step">01</span><div><strong class="module-three-popover-title">进入收藏</strong><small class="module-three-popover-title-zh" hidden=""></small></div></header>
+                      <div class="module-three-popover-grid">
+                        <article><p>用户操作</p><b class="module-three-popover-user">从首页进入示例收藏，了解当前可用材料。</b><span class="module-three-popover-user-zh" hidden=""></span></article>
+                        <article><p>AI 处理</p><b class="module-three-popover-ai">本步不调用模型。</b><span class="module-three-popover-ai-zh" hidden=""></span></article>
+                        <article><p>输出物</p><b class="module-three-popover-output">一组可选择的家居收藏</b><span class="module-three-popover-output-zh" hidden=""></span></article>
+                      </div>
+                    </section>
+                  </div>
+
+                </section>
+
+              </section>
+
+              <section class="teamalign-module-detail" data-chapter-detail="04" hidden="">
+                <section class="module-four-block module-four-architecture" aria-labelledby="module-four-architecture-label">
+                  <header class="module-one-section-heading">
+                    <p id="module-four-architecture-label">信息架构</p>
+                    
+                  </header>
+                  <div class="module-four-ia-map" aria-label="产品结构藏见
+                      
+          ">
+                    <div class="module-four-ia-tree-shell">
+                      <div class="module-four-ia-root"><em>产品结构</em><strong>藏见</strong></div>
+                      <ol class="module-four-ia-tree">
+                      <li class="module-four-ia-branch module-four-ia-branch--overview">
+                        <div class="module-four-ia-primary"><em>01 · 页面</em><strong>首页</strong></div>
+                        <div class="module-four-ia-children module-four-ia-children--secondary-grid"><article class="module-four-ia-secondary"><em>01 · 操作</em><strong>理解产品价值</strong></article><article class="module-four-ia-secondary"><em>02 · 操作</em><strong>进入示例收藏</strong></article></div>
+                      </li>
+
+                      <li class="module-four-ia-branch module-four-ia-branch--tasks">
+                        <div class="module-four-ia-primary"><em>02 · 页面</em><strong>收藏</strong></div>
+                        <div class="module-four-ia-children module-four-ia-children--secondary-grid"><article class="module-four-ia-secondary"><em>01 · 操作</em><strong>选择与取消</strong></article><article class="module-four-ia-secondary"><em>02 · 操作</em><strong>开始分析</strong></article></div>
+                      </li>
+
+                      <li class="module-four-ia-branch module-four-ia-branch--risk">
+                        <div class="module-four-ia-primary"><em>03 · 页面</em><strong>看见</strong></div>
+                        <div class="module-four-ia-children module-four-ia-children--secondary-grid"><article class="module-four-ia-secondary"><em>01 · 操作</em><strong>探索线索</strong></article><article class="module-four-ia-secondary"><em>02 · 操作</em><strong>查看证据</strong></article><article class="module-four-ia-secondary"><em>03 · 操作</em><strong>反馈修正</strong></article><article class="module-four-ia-secondary"><em>04 · 操作</em><strong>保存记录</strong></article></div>
+                      </li>
+
+                      <li class="module-four-ia-branch module-four-ia-branch--reports">
+                        <div class="module-four-ia-primary"><em>04 · 页面</em><strong>回望</strong></div>
+                        <div class="module-four-ia-children module-four-ia-children--secondary-grid"><article class="module-four-ia-secondary"><em>01 · 操作</em><strong>重新打开</strong></article><article class="module-four-ia-secondary"><em>02 · 操作</em><strong>返回回望</strong></article></div>
+                      </li>
+
+                      
+
+                      
+
+                      
+                      </ol>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="module-four-block module-four-flow" aria-labelledby="module-four-flow-label">
+                  <header class="module-one-section-heading">
+                    <p id="module-four-flow-label">用户流程</p>
+                    
+                  </header>
+                  <div class="module-four-workflow" aria-label="01 · 用户流程打开首页
+                      02 ·">
+                    <ol class="module-four-workflow-vertical">
+                      <li class="module-four-workflow-step module-four-workflow-step--overview"><article><em>01</em><strong>打开首页</strong></article></li>
+                      <li class="module-four-workflow-step"><article><em>02</em><strong>进入收藏</strong></article></li>
+                      <li class="module-four-workflow-step"><article><em>03</em><strong>校验输入</strong></article></li>
+                      <li class="module-four-workflow-step module-four-workflow-step--api"><article><em>04</em><strong>生成线索</strong></article></li>
+                      <li class="module-four-workflow-step module-four-workflow-step--output"><article><em>05</em><strong>探索地图</strong></article></li>
+                      <li class="module-four-workflow-step module-four-workflow-step--routes">
+                        <svg class="module-four-workflow-route-arrows" viewBox="0 0 600 58" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="workflow-route-arrowhead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7"></path></marker></defs><path class="flow-arrow" d="M300 0 C300 24 150 25 150 58"></path><path class="flow-arrow" d="M300 0 C300 24 450 25 450 58"></path></svg>
+                        <div class="module-four-workflow-route-group"><article><em>06</em><strong>核对证据</strong><p>理解线索来自哪些收藏</p></article><article><em>06</em><strong>提交反馈</strong><p>确认、否定或暂缓判断</p></article></div>
+                        <svg class="module-four-workflow-route-merge" viewBox="0 0 600 58" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="workflow-route-merge-arrowhead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7"></path></marker></defs><path d="M150 0 C150 22 300 23 300 36"></path><path d="M450 0 C450 22 300 23 300 36"></path><path class="flow-arrow" d="M300 36 V58"></path></svg>
+                      </li>
+                      <li class="module-four-workflow-step module-four-workflow-step--reports"><article><em>07</em><strong>保存结果</strong></article></li>
+                      <li class="module-four-workflow-step module-four-workflow-step--delivery"><article><em>08</em><strong>回望重开</strong></article></li>
+                    </ol>
+                  </div>
+                </section>
+
+                <section class="module-four-block module-four-grid" aria-labelledby="module-four-grid-label">
+                  <header class="module-one-section-heading">
+                    <p id="module-four-grid-label">可运行原型</p>
+                    
+                  </header>
+
+    <article class="module-four-live-demo" aria-label="藏见原型
+        
+        打开原型">
+      <header class="module-four-live-demo-header">
+        <div>
+          <p>藏见原型</p>
+        </div>
+        <a href="https://cangjian-ai-design.onrender.com" target="_blank" rel="noreferrer">打开原型</a>
+      </header>
+      <div class="module-four-live-demo-frame">
+        <iframe src="https://cangjian-ai-design.onrender.com/" title="藏见可运行原型" loading="eager" allow="clipboard-read; clipboard-write"></iframe>
+      </div>
+    </article>
+                </section>
+              </section>
+
+              <section class="teamalign-module-detail" data-chapter-detail="05" hidden="" aria-label="预期目标 · 待验证
+                    以下为设计预期与测">
+                <section class="module-four-block module-four-validation" aria-labelledby="module-four-validation-label">
+                  <header class="module-one-section-heading">
+                    <p id="module-four-validation-label">验证计划</p>
+                  </header>
+                  <p class="restored-note">待执行：拟邀请 10 位有家居选择需求的体验者；目前尚未开展正式用户测试。</p><div class="module-four-validation-list">
+                    <details class="module-four-validation-card">
+                      <summary><em>01 · 认知</em><strong>看懂并开始</strong><i>展开详情</i></summary>
+                      <div class="module-four-validation-detail"><p>能说明产品价值</p><p>独立选择示例收藏</p><p>不误认为自动同步工具</p></div>
+                    </details>
+                    <details class="module-four-validation-card">
+                      <summary><em>02 · 溯源</em><strong>找到线索依据</strong><i>展开详情</i></summary>
+                      <div class="module-four-validation-detail"><p>打开一个偏好泡泡</p><p>指出关联的原始收藏</p><p>解释两者的联系</p></div>
+                    </details>
+                    <details class="module-four-validation-card">
+                      <summary><em>03 · 校正</em><strong>质疑并修正</strong><i>展开详情</i></summary>
+                      <div class="module-four-validation-detail"><p>提交否定或不确定反馈</p><p>识别反馈后的状态</p><p>理解失败时如何重试</p></div>
+                    </details>
+                    <details class="module-four-validation-card">
+                      <summary><em>04 · 回访</em><strong>保存并回来</strong><i>展开详情</i></summary>
+                      <div class="module-four-validation-detail"><p>保存一次地图</p><p>从回望重新打开</p><p>说出可用于选择的标准</p></div>
+                    </details>
+                  </div>
+                </section>
+                <section class="module-five-block">
+                  <header class="module-one-section-heading module-five-section-heading">
+                    <p>衡量指标</p>
+                  </header>
+                  <aside class="module-five-pilot-note" aria-label="预期目标 · 待验证
+                    以下为设计预期与测">
+                    <p>预期目标 · 待验证</p>
+                    <strong>以下为设计预期与测量方案，尚未开展正式用户测试或线上数据采集。</strong>
+                    
+                  </aside>
+                  <div class="module-five-grid module-five-grid--sequence">
+                    <article class="module-five-card module-five-card--metrics">
+                          <header><em>01 · 任务目标</em><span class="module-five-status">待验证</span><h4>成功标准</h4></header>
+                          <figure class="module-five-bar-chart" aria-label="目标比例尚未实测
+                            任务完">
+                            <figcaption><span>计划样本 10 人</span><span>当前尚未实测</span></figcaption>
+                            <div class="module-five-bar-row" tabindex="0"><div><b>独立完成流程</b></div><div class="module-five-bar-track"><i style="--value:100%"></i><strong style="--value:80%"></strong></div><mark>8 / 10</mark><span class="module-five-bar-tooltip"><em>无需帮助，完成收藏、分析、反馈与回望。</em></span></div>
+                            <div class="module-five-bar-row" tabindex="0"><div><b>说清线索来源</b></div><div class="module-five-bar-track"><i style="--value:100%"></i><strong style="--value:80%"></strong></div><mark>8 / 10</mark><span class="module-five-bar-tooltip"><em>能指出一条 AI 线索对应的原始收藏。</em></span></div>
+                            <div class="module-five-bar-row" tabindex="0"><div><b>形成比较标准</b></div><div class="module-five-bar-track"><i style="--value:100%"></i><strong style="--value:70%"></strong></div><mark>7 / 10</mark><span class="module-five-bar-tooltip"><em>能提出一条可用于实际选择的比较标准。</em></span></div>
+                          </figure>
+                    </article>
+
+                    <article class="module-five-card module-five-card--funnel">
+                      <header><em>02 · 观察路径</em><span class="module-five-status">目标漏斗</span><h4>行为路径</h4></header>
+                      <figure class="module-five-funnel" aria-label="开始体验100%
+                        完成分析90%">
+                        <div style="--funnel-width:100%"><b>开始体验</b><strong>100%</strong></div>
+                        <div style="--funnel-width: 90%;"><b>完成分析</b><strong>90%</strong></div>
+                        <div style="--funnel-width: 80%;"><b>核对依据</b><strong>80%</strong></div>
+                        <div style="--funnel-width: 70%;"><b>形成标准</b><strong>70%</strong></div>
+                      </figure>
+                    </article>
+
+                    <article class="module-five-card module-five-card--attribution">
+                      <header><em>03 · 对照设计</em><span class="module-five-status">待验证</span><h4>验证贡献</h4></header>
+                      <figure class="module-five-attribution-split" aria-label="同一批材料的双方案交叉对照测试">
+                        <figcaption>
+                          <p><strong>A</strong><span><b>原始收藏列表</b><small>用户自行翻找图片、回忆原因并完成比较</small></span></p>
+                          <p><strong>B</strong><span><b>藏见线索地图</b><small>用户查看 AI 线索、原始证据并提交反馈</small></span></p>
+                        </figcaption>
+                        <div class="module-five-attribution-method">
+                          <p><b>测试任务</b><span>使用同一组收藏，选出更适合卧室的设计方向，并说明依据。</span></p>
+                          <p><b>测试方式</b><span>每位参与者都体验 A、B 两种方案；一半先用 A，另一半先用 B，降低顺序影响。</span></p>
+                          <p><b>比较指标</b><span>完成时间、能否找到依据、能否形成明确的比较标准。</span></p>
+                        </div>
+                      </figure>
+                    </article>
+
+                  </div>
+                </section>
+              </section>
+
+              <section class="teamalign-module-detail" data-chapter-detail="06" hidden="" aria-label="01 · 风险评估
+                        体验风险
+ ">
+                <section class="module-six-block">
+                  <ol class="module-six-timeline">
+                    <li class="module-six-item module-six-item--diagnosis">
+                      <header>
+                        <em>01 · 风险评估</em>
+                        <h4>体验风险</h4>
+                        
+                      </header>
+                      <figure class="module-six-visual module-six-quadrant" aria-label="设计判断 · 优先级示意
+                        
+  ">
+                        <figcaption><b>用户风险 · 应对优先级</b></figcaption>
+                        <div class="module-six-quadrant-plot">
+                          <span class="module-six-axis-label module-six-axis-label--impact-high">高影响</span>
+                          <span class="module-six-axis-label module-six-axis-label--effort-low">低投入</span>
+                          <div class="module-six-quadrant-grid">
+                            <article class="module-six-quadrant-chip module-six-quadrant-chip--accountability"><b>证据不可追溯</b><span class="module-six-quadrant-tooltip" role="tooltip"><strong>风险：AI 结论脱离原始收藏，用户难以判断是否可信</strong><strong>应对：每条线索关联证据，并允许用户纠正</strong></span></article>
+                            <article class="module-six-quadrant-chip module-six-quadrant-chip--security"><b>导入与隐私受限</b><span class="module-six-quadrant-tooltip" role="tooltip"><strong>风险：平台权限与个人数据边界限制真实收藏导入</strong><strong>应对：明确授权范围，最小化读取并支持删除</strong></span></article>
+                            <article class="module-six-quadrant-chip module-six-quadrant-chip--learning"><b>地图信息过载</b><span class="module-six-quadrant-tooltip" role="tooltip"><strong>风险：线索与连线过多时，用户难以找到重点</strong><strong>应对：分层呈现，默认突出当前任务相关线索</strong></span></article>
+                            <article class="module-six-quadrant-chip module-six-quadrant-chip--habit"><b>回访价值不足</b><span class="module-six-quadrant-tooltip" role="tooltip"><strong>风险：一次分析后没有后续任务，用户缺少再次打开的理由</strong><strong>应对：保存比较标准，并在真实决策节点承接回望</strong></span></article>
+                          </div>
+                          <span class="module-six-axis-label module-six-axis-label--effort-high">高投入</span>
+                          <span class="module-six-axis-label module-six-axis-label--impact-low">低影响</span>
+                        </div>
+                      </figure>
+                    </li>
+
+                    <li class="module-six-item module-six-item--enablement">
+                      <header>
+                        <em>02 · 边界设计</em>
+                        <h4>AI 边界设计</h4>
+                      </header>
+                      <figure class="module-six-visual module-six-enable" aria-label="藏见的 AI 价值、可信机制与责任边界">
+                        <div class="module-six-enable-hub"><b>可信与可控</b></div>
+                        <div class="module-six-enable-items">
+                          <details class="module-six-enable-item">
+                            <summary><b>价值任务</b><i>展开详情</i></summary>
+                            <div class="module-six-enable-detail">
+                              <p>用 AI 整理分散收藏，发现重复线索与可比较方向。</p>
+                              <p>只在能够帮助用户理解偏好或推进选择时使用 AI。</p>
+                              <p>以用户能否理解、核对并用于决策作为价值标准。</p>
+                            </div>
+                          </details>
+                          <details class="module-six-enable-item">
+                            <summary><b>可信机制</b><i>展开详情</i></summary>
+                            <div class="module-six-enable-detail">
+                              <p>每条 AI 结论都关联可核对的原始收藏证据。</p>
+                              <p>证据不足时允许返回不确定或暂无线索。</p>
+                              <p>用户可通过肯定、否定或不确定反馈修正结果。</p>
+                            </div>
+                          </details>
+                          <details class="module-six-enable-item">
+                            <summary><b>责任边界</b><i>展开详情</i></summary>
+                            <div class="module-six-enable-detail">
+                              <p>AI 提供解释与比较支持，不替用户完成最终选择。</p>
+                              <p>不在缺少证据时推断人格、身份或稳定偏好。</p>
+                              <p>收藏导入、保存和同步必须建立在明确授权之上。</p>
+                            </div>
+                          </details>
+                        </div>
+                      </figure>
+                    </li>
+
+                    <li class="module-six-item module-six-item--rollout">
+                      <header>
+                        <em>03 · 开发过程</em>
+                        <h4>AI Coding 协作</h4>
+                      </header>
+                      <figure class="module-six-visual module-six-rollout" aria-label="AI Coding 协作的三个步骤">
+                        <details class="module-six-rollout-stage"><summary><em>01</em><b>设计规格</b></summary><div class="module-six-rollout-detail"><p>先定义用户任务、AI 能力边界与验收标准，保留产品判断。</p><p>将流程、页面状态、数据结构和异常路径写成 AI Coding 可执行的任务。</p><p>用示例收藏、目标输出与交互规则提供完整上下文。</p></div></details><i aria-hidden="true"></i>
+                        <details class="module-six-rollout-stage"><summary><em>02</em><b>协作实现</b></summary><div class="module-six-rollout-detail"><p>由 AI Coding 生成与修改组件、交互及接口，我负责信息架构和体验决策。</p><p>逐轮检查证据链、状态反馈与边界情况，再用具体问题驱动修改。</p><p>为模型调用定义结构化输入输出，并设置无模型时的演示规则。</p></div></details><i aria-hidden="true"></i>
+                        <details class="module-six-rollout-stage"><summary><em>03</em><b>运行验证</b></summary><div class="module-six-rollout-detail"><p>在本地运行原型，检查响应式布局、交互路径与失败状态。</p><p>将问题转成明确约束，小步修改并回归验证，避免改动互相影响。</p><p>部署可运行版本，区分已实现能力与后续假设，供评审与测试。</p></div></details>
+                      </figure>
+                    </li>
+
+                    <li class="module-six-item module-six-item--roadmap">
+                      <header>
+                        <em>04 · 迭代路径</em>
+                        <h4>迭代记录</h4>
+                      </header>
+                      <figure class="module-six-visual module-six-roadmap" aria-label="本轮迭代与下一步验证计划">
+                        <article class="module-six-roadmap-track module-six-roadmap-track--product"><header><em>已完成</em><b>本轮迭代</b></header><ol aria-label="本轮已完成的三项调整"><li><em>01</em><span><b>调整藏见产品界面的信息优先级</b><small>突出当前任务、AI 线索与原始证据的关系</small></span></li><li><em>02</em><span><b>补齐证据链</b><small>让每条 AI 线索能够回到原始收藏</small></span></li><li><em>03</em><span><b>打通回访路径</b><small>保存结果后可继续查看与比较</small></span></li></ol></article>
+                        <article class="module-six-roadmap-track module-six-roadmap-track--organization"><header><em>下一步</em><b>验证计划</b></header><ol aria-label="下一步的三项验证计划"><li><em>01</em><span><b>测试真实任务</b><small>验证完成率、证据理解与选择支持</small></span></li><li><em>02</em><span><b>接入个人材料</b><small>探索收藏导入、授权与删除机制</small></span></li><li><em>03</em><span><b>验证多模态解析</b><small>评估图片与笔记共同生成线索的质量</small></span></li></ol></article>
+                      </figure>
+                    </li>
+                  </ol>
+                </section>
+              </section>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="portfolio-footer">
+      <p class="portfolio-footer-signature">Ruiying Liu</p>
+      <p class="portfolio-footer-copy">
+        <span aria-hidden="true">©</span>
+        <span class="portfolio-footer-year"></span>
+        · design what matters, develop what endures.
+      </p>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top"><span aria-hidden="true">↑</span></button>
+    <script src="./assets/fluid-cursor.js?v=20260909-safari-layer-boundary" defer=""></script>
+    <script src="./assets/cangjian.js?v=20260926-frame-recreate" defer=""></script>
+  
+
+</body></html>
