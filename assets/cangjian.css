@@ -1,5 +1,53 @@
-@import url("./case-study.css?v=20260926-demo-label");
+@import url("./case-study.css?v=20261011-blue-restored");
 
+/* Compact workflow overview; details are disclosed on selection. */
+.project-workflow { padding: 40px 7vw 44px; border-top: 1px solid var(--line); }
+.project-workflow-shell { max-width: 1440px; margin: 0 auto; }
+.project-workflow-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:22px; }
+.project-workflow-heading h2 { display:flex; align-items:center; gap:12px; margin:0; color:var(--ink); font:400 32px/1.3 "Songti SC","Noto Serif SC",serif; }
+.workflow-motif { width:34px; height:34px; flex:none; color:var(--klein); opacity:.8; }
+.workflow-motif-static { display:none; }
+@media(prefers-reduced-motion:reduce) {
+ .workflow-motif-live { display:none; }
+ .workflow-motif-static { display:block; }
+}
+.project-workflow-heading > p { margin:0; color:var(--muted); font-size:12px; letter-spacing:.04em; }
+.project-workflow-track { display:grid; grid-template-columns:repeat(9,minmax(0,1fr)); gap:8px; }
+.project-workflow-step { position:relative; display:flex; flex-direction:column; align-items:center; gap:12px; min-width:0; padding:14px 8px 16px; border:0; border-radius:16px; color:var(--ink); background:transparent; cursor:pointer; transition:background .2s,color .2s; }
+.project-workflow-step span { display:grid; place-items:center; width:30px; height:30px; border:1px solid color-mix(in srgb,var(--klein) 22%,transparent); border-radius:50%; color:var(--klein); font:400 10px/1 "JetBrains Mono",monospace; }
+.project-workflow-step strong { font:400 17px/1.5 "Noto Sans SC",sans-serif; white-space:nowrap; }
+.project-workflow-step:not(:last-child)::after { content:""; position:absolute; top:29px; left:calc(50% + 22px); width:calc(100% - 36px); height:1px; background:color-mix(in srgb,var(--klein) 20%,transparent); pointer-events:none; }
+.project-workflow-step:hover,.project-workflow-step.is-active { color:var(--klein); background:color-mix(in srgb,var(--klein) 6%,transparent); }
+.project-workflow-step.is-active span { color:var(--paper); background:var(--klein); border-color:var(--klein); box-shadow:0 0 0 5px color-mix(in srgb,var(--klein) 8%,transparent); }
+.project-workflow-step:focus-visible,.project-workflow-detail button:focus-visible { outline:2px solid var(--klein); outline-offset:-3px; }
+.project-workflow-detail { display:grid; grid-template-columns:28px 1fr auto; align-items:center; gap:16px; margin-top:16px; padding:20px 24px; border-radius:16px; background:linear-gradient(110deg,color-mix(in srgb,var(--klein) 7%,transparent),color-mix(in srgb,var(--klein) 2%,transparent)); }
+.project-workflow-detail[hidden] { display:none; }
+.project-workflow-detail > span { color:var(--klein); font:400 11px/1.5 monospace; }
+.project-workflow-detail > div { display:flex; align-items:baseline; gap:22px; }
+.project-workflow-detail h3 { margin:0; flex-shrink:0; color:var(--ink); font-size:16px; font-weight:500; }
+.project-workflow-detail p { margin:0; color:var(--muted); font-size:14px; line-height:1.8; }
+.project-workflow-detail button { padding:8px; border:0; color:var(--klein); background:none; cursor:pointer; font-size:12px; }
+@media(max-width:760px) {
+ .project-workflow-track { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .project-workflow-step { padding:12px 8px; flex-direction:row; justify-content:center; align-items:center; gap:10px; }
+ .project-workflow-step { isolation:isolate; }
+ .project-workflow-step::before { content:""; position:absolute; inset:0 10px; z-index:-1; border-radius:14px; background:transparent; pointer-events:none; transition:background .2s; }
+ .project-workflow-step:hover,.project-workflow-step.is-active { background:transparent; }
+ .project-workflow-step:hover::before,.project-workflow-step.is-active::before { background:color-mix(in srgb,var(--klein) 6%,transparent); }
+ .project-workflow-step:not(:last-child)::after { display:none; }
+ .project-workflow-step:not(:nth-child(3n))::after { display:block; content:"›"; top:18px; left:auto; right:-6px; width:auto; height:auto; background:none; color:color-mix(in srgb,var(--klein) 35%,transparent); font:300 18px/1 sans-serif; }
+ .project-workflow-detail > div { display:block; }
+ .project-workflow-detail h3 { margin-bottom:5px; }
+}
+@media(max-width:420px) {
+ .project-workflow { padding:28px 24px; }
+ .project-workflow-heading h2 { font-size:28px; }
+ .project-workflow-step { gap:7px; padding:12px 3px; }
+ .project-workflow-step span { width:24px; height:24px; font-size:9px; }
+ .project-workflow-step strong { font-size:15px; }
+ .project-workflow-detail { grid-template-columns:1fr auto; gap:10px; padding:16px 10px; }
+ .project-workflow-detail > span { display:none; }
+}
 /* TeamAlign keeps the CrossScribe case-study system, with its own empty media state. */
 .teamalign-video-placeholder {
   position: relative;
@@ -311,6 +359,31 @@ html[data-theme="dark"] .flow-node { border-color: #121a2a; }
   background: transparent;
 }
 
+/* A quiet pause between the process overview and the case introduction. */
+.project-workflow { padding-bottom:28px; }
+.project-workflow + .teamalign-bloom-section {
+  position: relative;
+  border-top: 0;
+  padding-top: clamp(36px, 4vw, 56px);
+}
+.project-workflow + .teamalign-bloom-section > .teamalign-bloom-shell {
+  position: relative;
+}
+.project-workflow + .teamalign-bloom-section > .teamalign-bloom-shell::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * clamp(36px, 4vw, 56px));
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--klein) 30%, transparent), transparent);
+  pointer-events: none;
+}
+/* Preserve this separator against the dark-mode wrapper background reset. */
+html[data-theme="dark"] .project-workflow + .teamalign-bloom-section > .teamalign-bloom-shell::before {
+  background: linear-gradient(90deg, transparent, rgba(142, 174, 255, .36), transparent) !important;
+}
 .teamalign-bloom-shell {
   width: min(1160px, 100%);
   margin: 0 auto;
@@ -6855,8 +6928,14 @@ html[data-theme="dark"] #case-structure .cangjian-scope-grid small,html[data-the
 .module-five-section-heading { margin-bottom:26px; }
 .module-four-validation-card[open] summary { min-height:132px; }
 .module-four-validation-card[open] .module-four-validation-detail { padding:16px; }
-#case-structure .structure-heading { grid-template-columns:minmax(0,1fr) minmax(430px,.65fr); }
-#case-structure .structure-heading > p { white-space:nowrap; }
+#case-structure .structure-heading { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+#case-structure .structure-heading > p { min-width:0; white-space:normal; justify-self:end; text-align:right; }
+#case-structure .structure-heading h2 { min-width:0; line-height:1.15; text-wrap:balance; }
+@media(max-width:1000px) {
+ #case-structure .structure-heading { grid-template-columns:minmax(0,1fr); gap:20px; }
+ #case-structure .structure-heading h2 { font-size:clamp(32px,6vw,60px); }
+ #case-structure .structure-heading > p { max-width:42em; justify-self:start; text-align:left; }
+}
 .module-five-bar-row:focus .module-five-bar-tooltip { opacity:1; visibility:visible; }
 .module-five-card > header h4,.module-six-item > header h4 { font-family:"Songti SC",serif; }
 .module-six-enable-detail p,.module-six-rollout-detail p { font:15px/1.8 "Noto Sans SC",sans-serif; }

@@ -10,6 +10,38 @@ const journeyNav = document.querySelector(".teamalign-journey-nav");
 const journeyProgress = document.querySelector(".teamalign-journey-scroll-progress");
 const journeyProgressBar = document.querySelector(".teamalign-journey-scroll-progress-bar");
 const chapterDetails = document.querySelectorAll("[data-chapter-detail]");
+
+const workflowSteps = document.querySelectorAll("[data-workflow-index]");
+const workflowDetail = document.querySelector("[data-workflow-detail]");
+const workflowDetailIndex = document.querySelector("[data-workflow-detail-index]");
+const workflowDetailTitle = document.querySelector("[data-workflow-detail-title]");
+const workflowDetailCopy = document.querySelector("[data-workflow-detail-copy]");
+const workflowClose = document.querySelector("[data-workflow-close]");
+
+const closeWorkflowDetail = () => {
+  workflowSteps.forEach((step) => {
+    step.classList.remove("is-active");
+    step.setAttribute("aria-expanded", "false");
+  });
+  if (workflowDetail) workflowDetail.hidden = true;
+};
+
+workflowSteps.forEach((step) => {
+  step.addEventListener("click", () => {
+    const shouldClose = step.classList.contains("is-active");
+    closeWorkflowDetail();
+    if (shouldClose || !workflowDetail) return;
+
+    step.classList.add("is-active");
+    step.setAttribute("aria-expanded", "true");
+    workflowDetailIndex.textContent = step.dataset.workflowIndex;
+    workflowDetailTitle.textContent = step.dataset.workflowTitle;
+    workflowDetailCopy.textContent = step.dataset.workflowCopy;
+    workflowDetail.hidden = false;
+  });
+});
+
+workflowClose?.addEventListener("click", closeWorkflowDetail);
 const painItems = document.querySelectorAll("[data-pain-point]");
 const gapFlipCards = document.querySelectorAll(".module-two-gap-flip");
 const workflowTabs = document.querySelectorAll("[data-workflow-phase]");
