@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;family=Noto+Sans+SC:wght@300;400;500&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/cangjian.css?v=20261011-intro-align">
+    <link rel="stylesheet" href="./assets/cangjian.css?v=20261011-coding-breakpoint">
     <script src="./assets/case-study.js?v=20261011-blue-restored" defer=""></script>
   </head>
   <body>
@@ -369,6 +369,37 @@
                     <li><em>04 · 人机决策权</em><div><b>采用</b><strong>建议与修正入口</strong><p>AI 提供线索，用户可以查看、保留或调整。</p></div><div><b>避免</b><strong>系统直接替选</strong><p>由系统替用户给出看似最优的唯一答案。</p></div></li>
                   </ol>
                 </div>
+                    <div class="module-two-block module-two-ai-boundary">
+                      <header class="module-one-section-heading">
+                        <p>AI 边界设计</p>
+                      </header>
+                      <figure class="module-six-visual module-six-enable" aria-label="AI 帮什么、如何核对结果，以及哪些事由用户决定">
+                        <div class="module-six-enable-hub"><b>AI 找线索<br>用户做判断</b></div>
+                        <div class="module-six-enable-items">
+                          <details class="module-six-enable-item">
+                            <summary><b>AI 帮用户做什么</b><i>展开详情</i></summary>
+                            <div class="module-six-enable-detail">
+                              <p>从用户选中的收藏里，找出反复出现的元素。例如，多条笔记都提到原木、棉麻，可以提示「偏爱天然的触感」。</p>
+                              <p>把这些线索和对应的收藏放在一起，帮助用户说清喜欢什么，作为之后比较选择的参考。</p>
+                            </div>
+                          </details>
+                          <details class="module-six-enable-item">
+                            <summary><b>结果怎么核对与纠正</b><i>展开详情</i></summary>
+                            <div class="module-six-enable-detail">
+                              <p>每条线索都能点开查看对应收藏。用户可以判断它是否符合自己，并标记「很像我」「不太像我」或「再看看」。</p>
+                              <p>材料不足时，应说明「暂时看不出共同点」，不为了给出结果而硬凑结论。</p>
+                            </div>
+                          </details>
+                          <details class="module-six-enable-item">
+                            <summary><b>哪些事不交给 AI</b><i>展开详情</i></summary>
+                            <div class="module-six-enable-detail">
+                              <p>不根据几条收藏给用户贴人格标签，也不替用户决定买什么、选哪种方案；最终选择由用户做。</p>
+                              <p>只分析用户主动选中的材料。后续若接入真实收藏，导入和同步前需取得用户授权。</p>
+                            </div>
+                          </details>
+                        </div>
+                      </figure>
+                    </div>
               </section>
 
               <section class="teamalign-module-detail" data-chapter-detail="03" aria-labelledby="module-three-workflow-label" hidden="">
@@ -683,57 +714,22 @@
                       </figure>
                     </li>
 
-                    <li class="module-six-item module-six-item--enablement">
-                      <header>
-                        <em>02 · 边界设计</em>
-                        <h4>AI 边界设计</h4>
-                      </header>
-                      <figure class="module-six-visual module-six-enable" aria-label="藏见的 AI 价值、可信机制与责任边界">
-                        <div class="module-six-enable-hub"><b>可信与可控</b></div>
-                        <div class="module-six-enable-items">
-                          <details class="module-six-enable-item">
-                            <summary><b>价值任务</b><i>展开详情</i></summary>
-                            <div class="module-six-enable-detail">
-                              <p>用 AI 整理分散收藏，发现重复线索与可比较方向。</p>
-                              <p>只在能够帮助用户理解偏好或推进选择时使用 AI。</p>
-                              <p>以用户能否理解、核对并用于决策作为价值标准。</p>
-                            </div>
-                          </details>
-                          <details class="module-six-enable-item">
-                            <summary><b>可信机制</b><i>展开详情</i></summary>
-                            <div class="module-six-enable-detail">
-                              <p>每条 AI 结论都关联可核对的原始收藏证据。</p>
-                              <p>证据不足时允许返回不确定或暂无线索。</p>
-                              <p>用户可通过肯定、否定或不确定反馈修正结果。</p>
-                            </div>
-                          </details>
-                          <details class="module-six-enable-item">
-                            <summary><b>责任边界</b><i>展开详情</i></summary>
-                            <div class="module-six-enable-detail">
-                              <p>AI 提供解释与比较支持，不替用户完成最终选择。</p>
-                              <p>不在缺少证据时推断人格、身份或稳定偏好。</p>
-                              <p>收藏导入、保存和同步必须建立在明确授权之上。</p>
-                            </div>
-                          </details>
-                        </div>
-                      </figure>
-                    </li>
 
                     <li class="module-six-item module-six-item--rollout">
                       <header>
-                        <em>03 · 开发过程</em>
+                        <em>02 · 开发过程</em>
                         <h4>AI Coding 协作</h4>
                       </header>
-                      <figure class="module-six-visual module-six-rollout" aria-label="AI Coding 协作的三个步骤">
-                        <details class="module-six-rollout-stage"><summary><em>01</em><b>设计规格</b></summary><div class="module-six-rollout-detail"><p>先定义用户任务、AI 能力边界与验收标准，保留产品判断。</p><p>将流程、页面状态、数据结构和异常路径写成 AI Coding 可执行的任务。</p><p>用示例收藏、目标输出与交互规则提供完整上下文。</p></div></details><i aria-hidden="true"></i>
-                        <details class="module-six-rollout-stage"><summary><em>02</em><b>协作实现</b></summary><div class="module-six-rollout-detail"><p>由 AI Coding 生成与修改组件、交互及接口，我负责信息架构和体验决策。</p><p>逐轮检查证据链、状态反馈与边界情况，再用具体问题驱动修改。</p><p>为模型调用定义结构化输入输出，并设置无模型时的演示规则。</p></div></details><i aria-hidden="true"></i>
-                        <details class="module-six-rollout-stage"><summary><em>03</em><b>运行验证</b></summary><div class="module-six-rollout-detail"><p>在本地运行原型，检查响应式布局、交互路径与失败状态。</p><p>将问题转成明确约束，小步修改并回归验证，避免改动互相影响。</p><p>部署可运行版本，区分已实现能力与后续假设，供评审与测试。</p></div></details>
+                      <figure class="module-six-visual module-six-rollout coding-process" aria-label="AI Coding 协作的三个步骤">
+                        <details class="module-six-rollout-stage"><summary><em>01</em><b>设计规格</b></summary><div class="module-six-rollout-detail"><p><span class="coding-point-label">我负责 · 产品判断</span><span>先定义用户任务、AI 能力边界与验收标准，保留产品判断。</span></p><p><span class="coding-point-label">我负责 · 任务说明</span><span>将流程、页面状态、数据结构和异常路径写成 AI Coding 可执行的任务。</span></p><p><span class="coding-point-label">我提供 · 示例材料</span><span>用示例收藏、目标输出与交互规则提供完整上下文。</span></p></div></details><i aria-hidden="true"></i>
+                        <details class="module-six-rollout-stage"><summary><em>02</em><b>协作实现</b></summary><div class="module-six-rollout-detail"><p><span class="coding-point-label">AI Coding 实现 · 我做决策</span><span>由 AI Coding 生成与修改组件、交互及接口，我负责信息架构和体验决策。</span></p><p><span class="coding-point-label">我检查 · AI Coding 修改</span><span>逐轮检查证据链、状态反馈与边界情况，再用具体问题驱动修改。</span></p><p><span class="coding-point-label">我定规则 · AI Coding 接入</span><span>为模型调用定义结构化输入输出，并设置无模型时的演示规则。</span></p></div></details><i aria-hidden="true"></i>
+                        <details class="module-six-rollout-stage"><summary><em>03</em><b>运行验证</b></summary><div class="module-six-rollout-detail"><p><span class="coding-point-label">我负责 · 体验检查</span><span>在本地运行原型，检查响应式布局、交互路径与失败状态。</span></p><p><span class="coding-point-label">AI Coding 修复 · 我复验</span><span>将问题转成明确约束，小步修改并回归验证，避免改动互相影响。</span></p><p><span class="coding-point-label">我负责 · 交付确认</span><span>部署可运行版本，区分已实现能力与后续假设，供评审与测试。</span></p></div></details>
                       </figure>
                     </li>
 
                     <li class="module-six-item module-six-item--roadmap">
                       <header>
-                        <em>04 · 迭代路径</em>
+                        <em>03 · 迭代路径</em>
                         <h4>迭代记录</h4>
                       </header>
                       <figure class="module-six-visual module-six-roadmap" aria-label="本轮迭代与下一步验证计划">
